@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, Button, TextInput, StyleSheet, TouchableOpacity, Alert} from 'react-native';
 
 
-const Welcomescreen = ()=> {
+const Welcomescreen = ({navigation})=> {
   return(
     <View style={Styles.mainContainer}>
       <View style={Styles.titleContainer}>
@@ -22,7 +22,10 @@ const Welcomescreen = ()=> {
 
         <View style={Styles.submit}>
         <TouchableOpacity 
-           onPress={() => Alert.alert('Details Submitted')} 
+           onPress={() => {
+             Alert.alert('Details Submitted'),
+             navigation.navigate('Profile')
+            }} 
            style={Styles.appButtonContainer}>
 
          <Text style={Styles.appButtonText}>Submit</Text>
