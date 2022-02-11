@@ -24,7 +24,7 @@ const Welcomescreen = ({navigation})=> {
         <TouchableOpacity 
            onPress={() => {
              Alert.alert('Details Submitted'),
-             navigation.navigate('Profile')
+             navigation.navigate('FirstPage')
             }} 
            style={Styles.appButtonContainer}>
 
@@ -84,8 +84,9 @@ const Styles = StyleSheet.create({
 
   },
   textinput:{
-    borderColor:'#ABB8C3',
+    borderColor:'#009688',
     borderWidth: 1,
+    fontSize: 18,
 
   },
   appButtonContainer: {
