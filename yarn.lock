@@ -4341,6 +4341,11 @@
   "resolved" "https://registry.npmjs.org/lodash.throttle/-/lodash.throttle-4.1.1.tgz"
   "version" "4.1.1"
 
+"lodash.toarray@^4.4.0":
+  "integrity" "sha1-JMS/zWsvuji/0FlNsRedjptlZWE="
+  "resolved" "https://registry.npmjs.org/lodash.toarray/-/lodash.toarray-4.4.0.tgz"
+  "version" "4.4.0"
+
 "lodash@^4.17.10", "lodash@^4.17.14", "lodash@^4.17.15", "lodash@^4.17.19", "lodash@^4.7.0":
   "integrity" "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
   "resolved" "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
@@ -4854,6 +4859,13 @@
   "version" "0.1.17"
   dependencies:
     "minimatch" "^3.0.2"
+
+"node-emoji@1.10.0":
+  "integrity" "sha512-Yt3384If5H6BYGVHiHwTL+99OzJKHhgp82S8/dktEK73T26BazdgZ4JZh92xSVtGNJvz9UbXdNAc5hcrXV42vw=="
+  "resolved" "https://registry.npmjs.org/node-emoji/-/node-emoji-1.10.0.tgz"
+  "version" "1.10.0"
+  dependencies:
+    "lodash.toarray" "^4.4.0"
 
 "node-fetch@^2.2.0", "node-fetch@^2.6.0":
   "integrity" "sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ=="
@@ -5402,6 +5414,13 @@
     "flow-parser" "^0.121.0"
     "jscodeshift" "^0.11.0"
     "nullthrows" "^1.1.1"
+
+"react-native-emoji@^1.8.0":
+  "integrity" "sha512-VunKOtYes6eymyWwE7QS3mhmNXksTt2AN92PcGRtmDKLDPjuKrwd5tcJckFUekAK3H+6AMpwYy30CsiCJrDdFQ=="
+  "resolved" "https://registry.npmjs.org/react-native-emoji/-/react-native-emoji-1.8.0.tgz"
+  "version" "1.8.0"
+  dependencies:
+    "node-emoji" "1.10.0"
 
 "react-native-safe-area-context@^3.3.2", "react-native-safe-area-context@>= 3.0.0":
   "integrity" "sha512-yOwiiPJ1rk+/nfK13eafbpW6sKW0jOnsRem2C1LPJjM3tfTof6hlvV5eWHATye3XOpu2cJ7N+HdkUvUDGwFD2Q=="

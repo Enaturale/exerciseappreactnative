@@ -24,7 +24,7 @@ const Welcomescreen = ({navigation})=> {
         <TouchableOpacity 
            onPress={() => {
              Alert.alert('Details Submitted'),
-             navigation.navigate('FirstPage')
+             navigation.navigate('Welcome!')
             }} 
            style={Styles.appButtonContainer}>
 

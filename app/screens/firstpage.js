@@ -1,12 +1,16 @@
 import React from 'react';
 import {View, Text, StyleSheet, Button, Alert, TouchableOpacity} from 'react-native';
 
+
 const FirstPage=() => {
     return(
         <View>
-            <Text style={Styles.title}>Welcome! It is another day in Paradise.</Text>
+            <Text style={Styles.title}>It is another day in Paradise. 
+           
+            </Text>
+
             <View style= {Styles.rectangle}>
-                <Text>
+                <Text style={Styles.rectangleText}>
                     Smart running
                     Smart running
                     Smart running
@@ -25,10 +29,11 @@ const FirstPage=() => {
 
 const Styles = StyleSheet.create({
     title:{
-        color: "#555555",
+        color: "#00796B",
         fontSize: 15,
         marginLeft: 20,
         marginTop: 20,
+        fontWeight:'bold',
 
     },
     rectangle: {
@@ -43,6 +48,9 @@ const Styles = StyleSheet.create({
         alignSelf: 'center',
         
       
+    },
+    rectangleText:{
+        color: 'white'
     }
 })
 
