@@ -7,7 +7,7 @@ const Homescreen = ({navigation})=> {
     <View>
     <View style={styles.container}>
       <Text style={styles.text}>
-        Would you like to keep fit?
+        Would you like to STAY FIT?
       </Text>
       </View>
       
@@ -28,14 +28,15 @@ const Homescreen = ({navigation})=> {
 const styles = StyleSheet.create({
     text:{
         fontSize: 25,
-        color: '#D32F2F', 
-        marginBottom: 20,            
+        // color: '#D32F2F', 
+        marginBottom: 20,   
+        fontWeight: 'bold'         
     },
     container:{
         justifyContent: 'center',
         alignItems:'center',
         alignContent:'center',
-        marginTop: 220, 
+        marginTop: 300, 
        
     },
     button:{
