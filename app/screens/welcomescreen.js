@@ -24,7 +24,7 @@ const Welcomescreen = ({navigation})=> {
         <TouchableOpacity 
            onPress={() => {
              Alert.alert('Details Submitted'),
-             navigation.navigate('Welcome!')
+             navigation.navigate('The Exercise PRO!')
             }} 
            style={Styles.appButtonContainer}>
 

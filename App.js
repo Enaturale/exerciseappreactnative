@@ -27,7 +27,7 @@ const App = ()=> {
 
          <Stack.Screen name="Profile" component={PersonalDetails}  />
 
-         <Stack.Screen name="Welcome!" component={FirstPage}  />
+         <Stack.Screen name="The Exercise PRO!" component={FirstPage}  />
 
 
        </Stack.Navigator>
