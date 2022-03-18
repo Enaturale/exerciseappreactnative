@@ -37,7 +37,10 @@ const FirstPage=({navigation}) => {
             />
             <View style={{flexDirection:'column'}}>
                 <Text style={Styles.runningText}>               
-                    Running
+                    Running                           
+                    
+                </Text>
+                <Text style={Styles.runningText}>               
                     20 Laps             
                     
                 </Text>
@@ -46,42 +49,82 @@ const FirstPage=({navigation}) => {
                    // style={Styles.appButtonContainer}
                     >
 
-                    <Text style={Styles.appButtonText}>See More...</Text>
+                    <Text style={Styles.appButtonText}>See More</Text>
                 </TouchableOpacity>
             </View>
 
                
             </View>
 
-            <View style= {Styles.rectangle}>
-            <Image  style={Styles.waterPng}
-            source={require("../assets/waterh.png")}
+            <View style= {Styles.rectangleskip}>
+            <Image  style={Styles.skipPng}
+            source={require("../assets/skip.png")}
             />
+
+            <View style={{flexDirection:'column'}}>
                 <Text style={Styles.rectangleText}>               
                     Jumping Rope
-                   
+                                       
                 </Text>
+                <Text style={Styles.rectangleText}>               
+                    40 Counts
+                                       
+                </Text>
+                <TouchableOpacity 
+                    onPress={() => navigation.navigate('Profile')} 
+                   // style={Styles.appButtonContainer}
+                    >
+
+                    <Text style={Styles.appButtonTextSkip}>See More</Text>
+                </TouchableOpacity>
+
+            </View>
+               
             </View>
 
-            <View style= {Styles.rectangle}>
+            <View style= {Styles.rectangleTummy}>
             <Image  style={Styles.waterPng}
-            source={require("../assets/waterh.png")}
+            source={require("../assets/tummy.png")}
             />
-                <Text style={Styles.rectangleText}>               
+            <View style={{flexDirection:'row'}}>
+                <View style={{flexDirection:'column'}}>
+                <Text style={Styles.rectangleText}>              
                     
                    Tummy Exercises
                 </Text>
+                <Text style={Styles.rectangleTextTummy}>
+                    20 times
+                </Text>
+                </View>
+                <TouchableOpacity 
+                    onPress={() => navigation.navigate('Profile')} 
+                   // style={Styles.appButtonContainer}
+                    >
+
+                    <Text style={Styles.appButtonTextTummy}>See More</Text>
+                </TouchableOpacity>
             </View>
 
-            <View style= {Styles.rectangle}>
-            <Image  style={Styles.waterPng}
-            source={require("../assets/waterh.png")}
+            </View>
+
+            <View style= {Styles.rectangleYoga}>
+            <Image  style={Styles.yogaPng}
+            source={require("../assets/yoya.png")}
             />
-                <Text style={Styles.rectangleText}>               
+            <View style={{flexDirection:"column"}}>
+                <Text style={Styles.yogaText}>              
                    
-                   Weights
-                   
+                   Yoga                   
                 </Text>
+                <Text style={Styles.yogaText}>              
+                   
+                   Start your day with a dose of relaxing exercises.                 
+                </Text>
+            </View>
+            </View>
+
+            <View style={{height: 50}}>
+
             </View>
         </ScrollView>
 
@@ -124,7 +167,42 @@ const Styles = StyleSheet.create({
        
               
     },
-    rectanglerun: {
+    rectangleYoga: {
+        width: 100 * 3.8,
+        height: 240,
+        backgroundColor: "#009688",
+        paddingLeft: -70,
+        paddingRight:  20,
+        paddingTop: 20,
+        
+        marginTop: 20,
+        borderRadius: 10,
+        alignSelf: 'center',
+        borderColor: '#009688',
+        borderStyle: 'solid',
+        borderWidth: 2,
+        flexDirection: 'row',
+       
+              
+    },
+    rectangleTummy: {
+        width: 100 * 3.8,
+        height: 240,
+        backgroundColor: "#689F38",
+        paddingLeft: -70,
+        paddingRight:  20,
+        paddingTop: 20,
+        marginTop: 20,
+        borderRadius: 10,
+        alignSelf: 'center',
+        borderColor: '#689F38',
+        borderStyle: 'solid',
+        borderWidth: 2,
+        flexDirection: 'column',
+       
+              
+    },
+rectanglerun: {
         width: 100 * 3.8,
         height: 180,
         backgroundColor: "#FBC02D",
@@ -140,13 +218,43 @@ const Styles = StyleSheet.create({
         flexDirection: 'row',
        
               
-    },
-    waterPng:{
+},
+rectangleskip: {
+        width: 100 * 3.8,
+        height: 200,
+        backgroundColor: "#F44336",
+        paddingLeft: -70,
+        paddingRight:  20,
+        paddingTop: 20,
+        marginTop: 20,
+        borderRadius: 10,
+        alignSelf: 'center',
+        borderColor: '#F44336',
+        borderStyle: 'solid',
+        borderWidth: 2,
+        flexDirection: 'row',
+       
+              
+},
+waterPng:{
          height: 130,
         // width: 160,
 
-    },
-    rectangleText:{
+},
+skipPng:{
+        height: 160,
+       // width: 160,
+       marginLeft: 20, 
+
+},
+yogaPng:{
+    
+   // width: 160,
+   marginLeft: 20,
+   marginTop: 20, 
+
+},
+rectangleText:{
         color: 'white',
         fontSize: 18,
         fontWeight:'normal',
@@ -155,13 +263,31 @@ const Styles = StyleSheet.create({
         marginTop: 20,
         letterSpacing: 2,
     
-    },
-    runningPng:{
+},
+yogaText:{
+    color: 'white',
+    fontSize: 18,
+    fontWeight:'normal',
+    width: 220,
+    marginLeft: 0,
+    marginTop: 20,
+    letterSpacing: 2,
+
+},
+rectangleTextTummy:{
+        color: 'white',
+        fontSize: 18,
+        fontWeight:'normal',
+        width: 220,
+        marginLeft: 20,
+        marginTop: 0,
+        letterSpacing: 2,    
+},
+runningPng:{
         height: 130,
         //width: 160,
-
-   },
-   runningText:{
+},
+runningText:{
     color: 'black',
     fontSize: 18,
     fontWeight:'normal',
@@ -169,29 +295,46 @@ const Styles = StyleSheet.create({
     marginLeft: 40,
     marginTop: 20,
     letterSpacing: 2,
-
-
-   },
-   appButtonContainer: {
+},
+appButtonContainer: {
     elevation: 8,
     backgroundColor: "#009688",
     borderRadius: 10,
     paddingVertical: 10,
     marginLeft: 100,
-    marginHorizontal: 20,
+    marginHorizontal: 20, 
     
-    
-  },
-  appButtonText: {
+},
+appButtonText: {
     fontSize: 18,
     color: "black",
     fontWeight: "bold",
     alignSelf: "center",
     // textTransform: "uppercase",
-    marginTop: 60,
+    marginTop: 30,
     marginLeft: 60,
     
-  },
+},
+appButtonTextSkip: {
+    fontSize: 18,
+    color: "white",
+    fontWeight: "bold",
+    alignSelf: "center",
+    // textTransform: "uppercase",
+    marginTop: 40,
+    marginLeft: 60,
+    
+},
+appButtonTextTummy: {
+    fontSize: 18,
+    color: "white",
+    fontWeight: "bold",
+    alignSelf: "center",
+    // textTransform: "uppercase",
+    marginTop: 40,
+    marginLeft: 10,
+    
+},
 })
 
 export default FirstPage;
