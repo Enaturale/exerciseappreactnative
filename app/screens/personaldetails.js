@@ -17,18 +17,19 @@ const PersonalDetails = ({navigation}) => {
                 >
                     <Picker.Item label="Male" value="Male" />
                     <Picker.Item label="Female" value="Female" />
-                </Picker>
+                   </Picker>
                 <TextInput placeholder ="Gender" />
                 <TextInput placeholder ="Username" />
                 <TextInput placeholder ="Username" />
 
                 <TouchableOpacity
                    onPress={() => {
-                  Alert.alert('Details Submitted')             
+                  Alert.alert('Details Submitted'), 
+                  navigation.navigate('The Exercise PRO!')             
                 }} 
                style={Styles.appButtonContainer} >
 
-         <Text style={Styles.appButtonText}>Submit</Text>
+                <Text style={Styles.appButtonText}>Submit</Text>
                 </TouchableOpacity>
 
             </View>

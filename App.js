@@ -4,17 +4,20 @@ import Homescreen from './app/screens/homescreen';
 import Welcomescreen from './app/screens/welcomescreen';
 import PersonalDetails from './app/screens/personaldetails';
 import FirstPage from './app/screens/firstpage';
+import BottomTabs from './app/screens/bottomTabs';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 
 const Stack = createNativeStackNavigator();
 
 
 const App = ()=> {
   return(
-
-     <NavigationContainer>
+ 
+     <NavigationContainer>  
+            
        <Stack.Navigator>
          <Stack.Screen 
            name = "Home"
@@ -27,9 +30,10 @@ const App = ()=> {
 
          <Stack.Screen name="Profile" component={PersonalDetails}  />
 
-         <Stack.Screen name="The Exercise PRO!" component={FirstPage}  />
+         <Stack.Screen name="The Exercise PRO!" component={BottomTabs}  />      
 
-
+         
+          
        </Stack.Navigator>
      </NavigationContainer>
   ) 

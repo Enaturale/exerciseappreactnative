@@ -120,6 +120,14 @@ const FirstPage=({navigation}) => {
                    
                    Start your day with a dose of relaxing exercises.                 
                 </Text>
+
+                <TouchableOpacity 
+                    onPress={() => navigation.navigate('Profile')} 
+                   // style={Styles.appButtonContainer}
+                    >
+
+                    <Text style={Styles.appButtonTextTummy}>See More</Text>
+                </TouchableOpacity>
             </View>
             </View>
 
